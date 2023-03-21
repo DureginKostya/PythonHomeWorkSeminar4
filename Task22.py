@@ -19,9 +19,7 @@ try:
     print(*second_multi)
     intersection_multi = set(first_multi).intersection(set(second_multi))
     if intersection_multi != set():
-        intersection_multi = list(intersection_multi)
-        if len(intersection_multi) > 1:
-            intersection_multi.sort()
+        intersection_multi = tuple(sorted(intersection_multi))
         print('Одинаковый(-ые) элемент(-ы) в первом и во втором множествах:', end=' ')
         print(*intersection_multi)
     else:
